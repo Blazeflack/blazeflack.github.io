@@ -2208,6 +2208,13 @@ input, select, textarea {
 
 		}
 
+/* Socials */
+#socials a {
+	color: #4696e5 !important;
+	height: auto !important;
+	margin-top: 1em;
+}
+
 /* Yep */
 .hehe {
 	font-size: 12px;
