@@ -1306,11 +1306,13 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: url("images/overlay.png"), url("images/bg.jpg");
+		background-image: url("images/overlay.png"), url("images/pattern-size1.svg");
+		background-color: #4696e5;
 		background-repeat: repeat, no-repeat;
-		background-size: auto, 100% 100%;
-		background-attachment: fixed;
 		overflow-y: scroll;
+		background-position: top left, center center;
+		background-attachment: fixed, fixed;
+		background-size: auto, cover;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1334,32 +1336,48 @@ input, select, textarea {
 
 		@media screen and (max-width: 1680px) {
 
-			body, input, textarea, select {
-				font-size: 15pt;
+			body, input, textarea, select, #interests p {
+				font-size: 15pt !important;
+			}
+			
+			#interests p i.icon {
+				font-size: 10pt !important;
 			}
 
 		}
 
 		@media screen and (max-width: 1280px) {
 
-			body, input, textarea, select {
-				font-size: 14pt;
+			body, input, textarea, select, #interests p {
+				font-size: 14pt !important;
+			}
+			
+			#interests p i.icon {
+				font-size: 8pt !important;
 			}
 
 		}
 
 		@media screen and (max-width: 736px) {
 
-			body, input, textarea, select {
-				font-size: 12pt;
+			body, input, textarea, select, #interests p {
+				font-size: 12pt !important;
+			}
+			
+			#interests p i.icon {
+				font-size: 8pt !important;
 			}
 
 		}
 
 		@media screen and (max-width: 360px) {
 
-			body, input, textarea, select {
-				font-size: 11pt;
+			body, input, textarea, select, #interests p {
+				font-size: 11pt !important;
+			}
+			
+			#interests p i.icon {
+				font-size: 8pt !important;
 			}
 
 		}
@@ -1769,13 +1787,13 @@ input, select, textarea {
 
 /* Nav */
 
-	#nav {
+	#nav, #socials {
 		text-align: center;
 		height: 4.25em;
 		cursor: default;
 	}
 
-		#nav a {
+		#nav a, #socials a {
 			position: relative;
 			display: inline-block;
 			color: #ffffff;
@@ -1792,22 +1810,22 @@ input, select, textarea {
 			transition: opacity .25s ease-in-out;
 		}
 
-			#nav a.icon:before {
+			#nav a.icon:before, #socials a.icon:before {
 				padding-right: 0;
 			}
 
-			#nav a:before {
+			#nav a:before, #socials a:before {
 				font-size: 0.8em;
 			}
 
-			#nav a:after {
+			#nav a:after, #socials a:after {
 				content: '';
 				display: block;
 				position: absolute;
 				left: 50%;
 				bottom: -0.75em;
 				margin-left: -0.5em;
-				border-bottom: solid 0em #ffffff;
+				border-bottom: solid 0em #f6f6f6;
 				border-left: solid 0.5em transparent;
 				border-right: solid 0.5em transparent;
 				-moz-transition: border-bottom-width .25s ease-in-out;
@@ -1816,7 +1834,7 @@ input, select, textarea {
 				transition: border-bottom-width .25s ease-in-out;
 			}
 
-			#nav a span {
+			#nav a span, #socials a span {
 				display: block;
 				position: absolute;
 				background: #222222;
@@ -1835,7 +1853,7 @@ input, select, textarea {
 				margin-left: -2.75em;
 			}
 
-				#nav a span:after {
+				#nav a span:after, #socials a span:after {
 					content: '';
 					display: block;
 					position: absolute;
@@ -1847,25 +1865,25 @@ input, select, textarea {
 					border-right: solid 0.6em transparent;
 				}
 
-			#nav a:hover {
+			#nav a:hover, #socials a:hover {
 				opacity: 1.0;
 			}
 
-				#nav a:hover span {
+				#nav a:hover span, #socials a:hover span {
 					opacity: 1.0;
 				}
 
-			#nav a.active {
+			#nav a.active, #socials a.active {
 				opacity: 1.0;
 			}
 
-				#nav a.active:after {
+				#nav a.active:after, #socials a.active:after {
 					border-bottom-width: 0.5em;
 				}
 
 		@media screen and (max-width: 980px) {
 
-			#nav a span {
+			#nav a span, #socials a span {
 				display: none;
 			}
 
@@ -1947,7 +1965,7 @@ input, select, textarea {
 		position: relative;
 		overflow: hidden;
 		width: 100%;
-		background: #ffffff;
+		background: #f6f6f6;
 		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
 		-moz-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
 		-webkit-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
@@ -2194,6 +2212,16 @@ input, select, textarea {
 .hehe {
 	font-size: 12px;
 }
+
+/* Interests */
+#interests p {
+	font-size: 16pt;
+	line-height: 1.5;
+}
+
+#interests p i.icon {
+	font-size: 10pt;
+}
 		
 /* CV */
 .container {
@@ -2263,7 +2291,7 @@ clip-path: circle(50% at 50% 50%);
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 38px;
 	text-transform: uppercase;
-	border-color: #7aa830;
+	border-color: #4696e5;
 	border-width: 3px;
 	font-weight: 400;
 }
@@ -2354,7 +2382,7 @@ clip-path: circle(50% at 50% 50%);
 	font-weight: bold;
 	text-transform: uppercase;
 	border-bottom-style: solid;
-	border-color: #7aa830;
+	border-color: #4696e5;
 	border-width: 3px;
 	margin: 0px 0px;
 	padding-bottom: 5px;
@@ -2420,12 +2448,12 @@ clip-path: circle(50% at 50% 50%);
 .section-timeline {
 	position: absolute;
 	left: 16px; top: 0; width: 2px; height: 100%;
-	background: #7aa830;
+	background: #4696e5;
 }
 .section-timeline-time {
 	width: 10px; height: 10px;
 	border-radius: 5px;
-	background: #7aa830;
+	background: #4696e5;
 	position: absolute;
     left: 12px;
     top: 19px;	
@@ -2446,7 +2474,7 @@ clip-path: circle(50% at 50% 50%);
 	font-weight: 400 !important;
 }
 .subsection-name-info a {
-	color: #7aa830 !important;
+	color: #4696e5 !important;
 	text-decoration: none;
 }
 .subsection-name-info a span {
@@ -2528,7 +2556,7 @@ clip-path: circle(50% at 50% 50%);
 	overflow: hidden;
 }
 .skill-bar-indicator {
-	background: #7aa830;
+	background: #4696e5;
 	width: 0px;
 	height: 100%;
 }
@@ -2554,7 +2582,7 @@ clip-path: circle(50% at 50% 50%);
 
 /* references */
 .person-title-company {
-	color: #7aa830;
+	color: #4696e5;
 }
 
 .section.referencer div.subsection-content-ui {
