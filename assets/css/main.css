@@ -2630,4 +2630,5 @@ clip-path: circle(50% at 50% 50%);
 	.subsection-about, .interests-list {font-weight: 300;}
 	.subsection-about>em {font-weight: 400;}
 	#home, #interests {height:0px;display:none;position:absolute;}
+	#nav {display:none;}
  }
